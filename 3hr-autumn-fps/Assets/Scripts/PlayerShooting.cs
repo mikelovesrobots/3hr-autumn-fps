@@ -39,8 +39,14 @@ public class PlayerShooting : MonoBehaviour
         {
             if (hit.collider.CompareTag("Enemy"))
             {
-                Debug.Log("Enemy hit: " + hit.collider.gameObject.name);
-                // You can add more code here to damage the enemy or trigger other effects
+                var enemy = hit.collider.gameObject.GetComponent<Enemy>();
+                var knockbackDirection = (enemy.transform.position - transform.position).normalized;
+
+                // aim up a bit to make the enemy fly up
+                knockbackDirection.y = 0.5f;
+                knockbackDirection.Normalize();
+
+                enemy.Die(knockbackDirection);
             }
         }
 
