@@ -128,7 +128,7 @@ GameObject:
   m_Component:
   - component: {fileID: 17013630}
   - component: {fileID: 17013631}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 32776144}
   - component: {fileID: 32776145}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -571,6 +571,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1180307296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1180307298}
+  - component: {fileID: 1180307297}
+  m_Layer: 0
+  m_Name: Global
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1180307297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180307296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c51e866f8e7984454996f5be6c1dfde1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 2045449953}
+  enemyPrefab: {fileID: 6407752986183091637, guid: 973aaf5d00eeb443c8e4e62f8950ef31, type: 3}
+  numberOfEnemies: 128
+  minDistanceFromPlayer: 30
+  terrainSize: 256
+  maxSpawnHeight: 100
+  terrainLayer:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!4 &1180307298
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180307296}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1454760768
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,7 +634,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1454760769}
   - component: {fileID: 1454760770}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -634,7 +687,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1467870277}
   - component: {fileID: 1467870278}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -755,6 +808,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &2045449953 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6019004296604528623, guid: ec1a641d39aa44b708c6e1de2af7e096, type: 3}
+  m_PrefabInstance: {fileID: 186406242142495879}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2100152379
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,7 +824,7 @@ GameObject:
   - component: {fileID: 2100152382}
   - component: {fileID: 2100152381}
   - component: {fileID: 2100152380}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -913,6 +971,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1180307298}
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 2100152382}
